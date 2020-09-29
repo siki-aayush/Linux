@@ -5,3 +5,5 @@ UUID=03a21f50-ebdf-4d84-a0c6-442e91b669d7	/         	ext4      	rw,relatime	0 1
 # /dev/sdb1 LABEL=DATAPART1
 /dev/sdb1	/windows  	ntfs-3g      	uid=1000,gid=1000	0	 0
 
+# /dev/sda3 LABEL=OS
+UUID=01D4962EBF8FA070	/c	ntfs-3g		auto,nosuid,nodev,nofail,x-gvfs-show,user,exec,uid=1000,gid=1000,umask=0022	0	0

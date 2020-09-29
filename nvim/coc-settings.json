@@ -1,0 +1,27 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "html",
+    "json",
+    "python",
+    "c",
+    "cpp"
+  ],
+  // Python config
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.jediEnabled": false,
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfPath": "~/.local/bin/yapf",
+  "python.venvPath": "~/.virtualenvs",
+  "python.venvFolders": ["envs", "venv", ".pyenv", ".direnv"],
+  // Clang Config
+  "clangd.path": "/home/siki/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd",
+  // HTML config
+  "html.enable": true,
+  "html.filetypes": ["html", "django", "htmldjango", "handlebars"],
+  "html.format.enable": true,
+  "html.validate.scripts": true,
+  "html.validate.html": true,
+  "html.validate.styles": true,
+  "html.autoClosingTags": true
+}
