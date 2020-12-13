@@ -21,4 +21,16 @@ call plug#begin('~/.config/nvim/plugged')
     " GIT integrations 
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
-call plug#end()
+
+    " startify
+    Plug 'mhinz/vim-startify'
+
+    " status line
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    " quick scope
+    Plug 'unblevable/quick-scope'
+
+    call plug#end()
+
