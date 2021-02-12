@@ -1,0 +1,1 @@
+/home/siki/.config/i3/
