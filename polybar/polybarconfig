@@ -26,7 +26,7 @@ font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
 font-2 = "Noto Color Emoji:pixelsize=10:scale=7;2"
 font-3 = "Font Awesome 5 Brands:size=10;1"
 
-modules-left = wlan eth battery downspeed upspeed
+modules-left = wlan eth battery downspeed upspeed memory cpu
 modules-center = i3
 modules-right = temperature alsa backlight date powermenu
 
@@ -94,7 +94,7 @@ ramp-signal-foreground = #1f1f1f
 type = internal/network
 interface = wlp3s0
 interval = 1.0
-label-connected = " %downspeed%" 
+label-connected = " %downspeed%" 
 label-disconnected = disconnected
 label-connected-background = #8abeb7
 label-connected-foreground = #1f1f1f
@@ -104,11 +104,53 @@ label-connected-padding = 2
 type = internal/network
 interface = wlp3s0
 interval = 1.0
-label-connected = "%upspeed%" 
+label-connected = " %upspeed%" 
 label-disconnected = disconnected
 label-connected-background = #8abeb7
 label-connected-foreground = #1f1f1f
 label-connected-padding = 2
+
+[module/memory]
+type = internal/memory
+interval = 3
+format =  <label>
+#label =  %gb_used%
+format-background = #8abeb7
+format-foreground = #1f1f1f
+format-padding = 2
+
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █
+
+; Only applies if <ramp-free> is used
+ramp-free-0 = ▁
+ramp-free-1 = ▂
+ramp-free-2 = ▃
+ramp-free-3 = ▄
+ramp-free-4 = ▅
+ramp-free-5 = ▆
+ramp-free-6 = ▇
+ramp-free-7 = █
+
+
+[module/cpu]
+type = internal/cpu
+
+interval = 0.5
+
+format =  <label>
+format-background = #8abeb7
+format-foreground = #1f1f1f
+format-padding = 1
+
+label = "%percentage:2%%"
+
 
 [module/eth]
 type = internal/network
@@ -129,9 +171,7 @@ type = internal/date
 interval = 5
 
 
-date =
 date-alt = " %Y-%m-%d"
-
 
 time =  %I:%M:%p
 time-alt = %H:%M:%S
@@ -147,7 +187,6 @@ label = %date% %time%
 type = custom/menu
 
 expand-right = true
-
 format-spacing = 1
 
 label-open = 

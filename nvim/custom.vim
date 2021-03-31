@@ -25,3 +25,6 @@ inoremap <C-b> <ESC>bi
 
 " Paste from external clipboard
 nnoremap <S-P> "+p
+
+" Copy to external clipboard
+vnoremap <S-Y> "+y <CR>

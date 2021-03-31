@@ -10,7 +10,8 @@ set shiftwidth=4
 "set softtabstop=4
 "set expandtab
 set smartindent
-set nowrap
+"set nowrap
+set wrap
 set noswapfile
 set nobackup
 set undodir=~/.config/nvim/undodir
@@ -36,6 +37,7 @@ autocmd filetype c nnoremap <F5> :w <bar> exec '!gcc '.shellescape('%').' -o '.s
 autocmd filetype cpp nnoremap <F5> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 autocmd filetype ts nnoremap <F5> :w <bar> exec '!tsc %'<CR>
 autocmd filetype vim nnoremap <F5> :w <bar> :source % <CR>
+autocmd filetype sh nnoremap <F5> :w <bar> exec '!./%' <CR>
 
 
 let g:NERDDefaultAlign = 'left'
